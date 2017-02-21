@@ -65,6 +65,12 @@ open class Spotify: NSObject {
     }
     
     
+    open static func activateSpotify(completionHandler: (() -> ())? = nil){
+        _ = Spotify.activateSpotify()
+        completionHandler?()
+        NotificationCenter.default.post(name: Notification.Name(rawValue: InternalNotification.key), object: self)
+    }
+    
     // MARK: - Helpers
     static func executeAppleScriptWithString(_ command: String) -> String? {
         let myAppleScript = "if application \"Spotify\" is running then tell application \"Spotify\" to \(command)"
@@ -82,7 +88,7 @@ open class Spotify: NSObject {
         case withoutUI
     }
     
-    static func startSpotify(option:StartOptions) -> String?{
+    static func startSpotify(option:StartOptions) -> String? {
         let command:String;
         switch option {
         case .withoutUI:
@@ -92,6 +98,18 @@ open class Spotify: NSObject {
         }
         
         let myAppleScript = "if application \"Spotify\" is not running then \(command) application \"Spotify\""
+        
+        //print(myAppleScript)
+        var error: NSDictionary?
+        if let scriptObject = NSAppleScript(source: myAppleScript) {
+            return scriptObject.executeAndReturnError(&error).stringValue
+        }
+        return nil
+    }
+    
+    static func activateSpotify() -> String? {
+        
+        let myAppleScript = "activate application \"Spotify\""
         
         //print(myAppleScript)
         var error: NSDictionary?
