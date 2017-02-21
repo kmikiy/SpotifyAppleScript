@@ -12,7 +12,7 @@ platform :osx, '10.10'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'Spotify', '~> 0.0.1'
+    pod 'Spotify', '~> 0.1'
 end
 ```
 
