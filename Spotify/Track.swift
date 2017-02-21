@@ -17,6 +17,10 @@ open class Track: NSObject {
         get { return Spotify.executeAppleScriptWithString("get artist of current track") }
     }
     
+    open var albumArtist: String? {
+        get { return Spotify.executeAppleScriptWithString("get album artist of current track") }
+    }
+    
     open var artworkUrl: String? {
         get { return Spotify.executeAppleScriptWithString("get artwork url of current track") }
     }
