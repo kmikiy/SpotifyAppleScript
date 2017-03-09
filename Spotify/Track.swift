@@ -9,6 +9,11 @@
 import Foundation
 
 open class Track: NSObject {
+    
+    open var id: String? {
+        get { return Spotify.executeAppleScriptWithString("get id of current track") }
+    }
+    
     open var title: String? {
         get { return Spotify.executeAppleScriptWithString("get name of current track") }
     }
