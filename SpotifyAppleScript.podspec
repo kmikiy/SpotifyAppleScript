@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "Spotify"
-  s.version      = "0.2.1"
+  s.name         = "SpotifyAppleScript"
+  s.version      = "0.3.0"
   s.summary      = "A Spotify wrapper class for controlling Spotify on macOS"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.homepage     = "https://github.com/kmikiy/Spotify"
+  s.homepage     = "https://github.com/kmikiy/SpotifyAppleScript"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   s.author             = { "Kristyán Miklós" => "m.kristyan@gmail.com" }
   # Or just: s.author    = ""
   # s.authors            = { "" => "" }
-  # s.social_media_url   = "http://twitter.com/"
+   s.social_media_url   = "http://twitter.com/kmikiyy"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -77,7 +77,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/kmikiy/Spotify.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/kmikiy/SpotifyAppleScript.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -88,7 +88,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Spotify/*.swift"
+  s.source_files  = "SpotifyAppleScript/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
