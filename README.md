@@ -1,4 +1,4 @@
-# Spotify
+# SpotifyAppleScript
 A Spotify wrapper class for controlling Spotify on macOS.
 
 This wrapper class was originally created for [SpotMenu](https://github.com/kmikiy/SpotMenu).
