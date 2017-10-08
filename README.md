@@ -12,7 +12,7 @@ platform :osx, '10.10'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'Spotify', '~> 0.4'
+    pod 'SpotifyAppleScript', '~> 0.3'
 end
 ```
 
@@ -24,21 +24,21 @@ $ pod install
 ## Usage example
 
 ```swift
-import Spotify
+import SpotifyAppleScript
 
 
 // Get current artist
-if let artist = Spotify.currentTrack.artist {
+if let artist = SpotifyAppleScript.currentTrack.artist {
     print(artist)
 }
 
 // Get current track title
-if let title = Spotify.currentTrack.title {
+if let title = SpotifyAppleScript.currentTrack.title {
     print(title)
 }
 
 // Play next song
-Spotify.playNext()
+SpotifyAppleScript.playNext()
 ```
 
 For a real-world example checkout [SpotMenu](https://github.com/kmikiy/SpotMenu)
