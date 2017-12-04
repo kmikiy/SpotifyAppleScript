@@ -22,6 +22,10 @@ open class Track: NSObject {
         get { return SpotifyAppleScript.executeAppleScriptWithString("get artist of current track") }
     }
     
+    open var albumName: String? {
+        get { return SpotifyAppleScript.executeAppleScriptWithString("get album of current track") }
+    }
+    
     open var albumArtist: String? {
         get { return SpotifyAppleScript.executeAppleScriptWithString("get album artist of current track") }
     }
